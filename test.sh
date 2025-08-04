@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 mkdir test
-repeat 100; do
+repeat "$1"; do
 	period=$((RANDOM % 300))
 	id=$(curl -XPOST http://127.0.0.1:3000/count/$period)
 	(
