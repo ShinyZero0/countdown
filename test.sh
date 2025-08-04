@@ -8,7 +8,7 @@ repeat 100; do
 	begin=$(date +%s)
 	while :; do
 		resp=$(curl http://127.0.0.1:3000/count/$id)
-		if [[ resp = done ]] then break; fi
+		if [[ $resp = done ]] then break; fi
 	done 2>/dev/null
 	end=$(date +%s)
 	echo $period $((end-begin))>test/$id.txt
