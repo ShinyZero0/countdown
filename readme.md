@@ -1,4 +1,4 @@
-# waitress
+# countdown
 
 bybit has a countdown timer that can lapse 10 minutes
 in just some little 15 minutes which lowkey fucking sucks
@@ -18,7 +18,7 @@ server do
 # suite
 
 ```sh
-./test.sh $nclientes
+./test.sh $nclients
 cat test/*|while read a b; do echo $((abs(a-b)));done|dtk uc
 ```
 
